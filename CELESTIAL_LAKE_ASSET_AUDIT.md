@@ -1,21 +1,27 @@
-# Celestial Lake — Static opening composition v2
+# Celestial Lake — Mobile layout refinement V3
+**Branch:** feat/celestial-lake-static-opening — **status:** draft; not approved for merge.
 
-This branch is **still a draft**, not approved or ready to merge.
+## Corrections
+- Replaced harsh horizontal clipping in the composite garden upper/lower layers with 6%-height feathered CSS masks, reducing the visible seam across the mountain and shoreline.
+- Reduced top-arch height and softened the duplicated columns.
+- Set natural vertical scrolling; no fixed height and no scroll locking.
+- Preserved the 852:1846 composition ratio and the interactive text safe region. The Open Invitation label is **still a non-functional visual mock-up**.
+- No artwork regenerated; no animations introduced.
 
-## Implemented in v2
-- Refined arch scaling so the upper filigree does not dominate the sky.
-- Rendered each existing garden source twice with two **clipped positions**, keeping upper architectural foliage independent of lower peacock placement; no new images required.
-- Shifted the lower peacocks toward their positions in the approved master, avoiding duplicate birds from separate PNGs.
-- Aligned the pavilion, boat, mountains, lotus crest, title divider and bottom button.
-- Preserved the center names zone for future HTML content.
-- No animations or functional guest features added.
+## Verification
+- `scripts/validate_celestial_lake.py`: 20 HTML image tags resolve and 20+ existing artwork PNGs parse as PNG, including the intentionally opaque sky and lake.
+- Layout geometry was inspected by scaling a locally rendered Pillow image-layer composite at **360×800, 375×812 and 390×844**. This is a **simulation**, not a browser screenshot.
+- A real headless Chromium navigation was attempted against localhost, file:// and data: URLs; the execution environment blocked it with `ERR_BLOCKED_BY_ADMINISTRATOR`.
+- No claim of tested Safari, Android Chrome, or actual browser scroll behavior.
+- Visual gaps remain versus the user-approved master (arch/flowers and pavilion/boat size); do not merge until mobile browser review and fixes.
 
-## Static preview
-Open `public/index.html` from a simple static server (`python -m http.server 8000 --directory public`).
+## Test locally
+From repository root: `python -m http.server 8000 --directory public`
+Open `http://localhost:8000` and check at 360×800, 375×812 and 390×844.
+Run `python scripts/validate_celestial_lake.py` for structural checks.
 
-## QA evidence & caveats
-- A local Pillow image-layer composite was compared side by side against the **approved 852 × 1846 master**. Some visual differences remain (especially texture, arch and lower garden integration).
-- Local HTML references were checked: all 20 referenced PNGs exist. Tags were balanced, and the CSS parsed without errors.
-- An actual Chromium navigation test was attempted, but blocked with `ERR_BLOCKED_BY_ADMINISTRATOR`; therefore **browser/mobile layout is not verified**.
-- The approved master is still not uploaded to this repository. The existing left-garden source contains a left peacock; dedicated Asset 11 remains absent on GitHub.
-- Do not merge or add animations until visually reviewed at phone sizes 390×844, 375×812, and 360×800.
+## Remaining work before animation
+1. Browser-validate natural vertical scroll and no horizontal overflow.
+2. Review and align to approved master using actual on-phone screenshots.
+3. Add clean standalone Asset 11 and reconsider already-baked peacocks in the garden composite.
+4. Repair any transparency halos, especially around lake and flowers.
