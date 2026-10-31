@@ -1,0 +1,125 @@
+{
+  "project": "Celestial Lake",
+  "branch": "feat/celestial-lake-static-opening",
+  "artwork_stage": "prototype",
+  "master_canvas": {
+    "width": 852,
+    "height": 1846,
+    "approved_master": "Not yet in repository"
+  },
+  "files": [
+    {
+      "name": "01_sky.png",
+      "git_sha": "a2f7894ff5831c9b36b325709e7a31994f0343c8",
+      "group": "scene"
+    },
+    {
+      "name": "02_mountains.png",
+      "git_sha": "aabc612cb5f4070766aa1298079aee7544e49229",
+      "group": "scene"
+    },
+    {
+      "name": "03_pavilion.png",
+      "git_sha": "4331a22291222de47f496cb5e5eec03d56e29b9e",
+      "group": "scene"
+    },
+    {
+      "name": "04_lake.png",
+      "git_sha": "ce6f8eec90958ca0c687cbb7008e15c050072c05",
+      "group": "scene"
+    },
+    {
+      "name": "05_shimmer.png",
+      "git_sha": "a04a9bbf85411c4e3c57b4d4aaade280a15061f6",
+      "group": "scene"
+    },
+    {
+      "name": "06_boat.png",
+      "git_sha": "9b1cd6c9aaec2ed089ac65b5ed593ae0abcc06fc",
+      "group": "scene"
+    },
+    {
+      "name": "07_left_garden.png",
+      "git_sha": "b6c2c4af3e1c3349a56e63754e343ba7f0aa7951",
+      "group": "scene"
+    },
+    {
+      "name": "08_right_garden.png",
+      "git_sha": "c6cb8c005747d3e31892e3d8a661e21bfa72b19d",
+      "group": "scene"
+    },
+    {
+      "name": "09_left_wisteria.png",
+      "git_sha": "8e4229f665402dea9cd49b42a776ee03b7cfa80d",
+      "group": "scene"
+    },
+    {
+      "name": "10_right_wisteria.png",
+      "git_sha": "2a724dd77250c0af229d65f803ca62e9337a5181",
+      "group": "scene"
+    },
+    {
+      "name": "12_right_peacock.png",
+      "git_sha": "20e7ebd7838c37d0cf7dada798b2926889d9a282",
+      "group": "frame"
+    },
+    {
+      "name": "13_arch_top_ornament.png",
+      "git_sha": "32c2416886cb4610fb90d8fd44d6755f802c6124",
+      "group": "frame"
+    },
+    {
+      "name": "14_left_arch_column.png",
+      "git_sha": "ac5d2030b925f98afa76683b85b82c1c3c58b855",
+      "group": "frame"
+    },
+    {
+      "name": "15_right_arch_column.png",
+      "git_sha": "c9cf37b15b05e0edbe43bae58b223ad81d9b27bd",
+      "group": "frame"
+    },
+    {
+      "name": "16_lotus_crest.png",
+      "git_sha": "cb09c54a5210534c8c805be34a3f80133961ae3e",
+      "group": "details"
+    },
+    {
+      "name": "17_gold_divider.png",
+      "git_sha": "3e4f30dd053069a81649304e59f2d65105b8cb5a",
+      "group": "details"
+    },
+    {
+      "name": "18_floating_lotus.png",
+      "git_sha": "75f2d20a53024a93ce42c1fa2eb7d95e66d05b82",
+      "group": "details"
+    },
+    {
+      "name": "19_foreground_flower_cluster.png",
+      "git_sha": "255d64a66cdd6119da6fb7bf3fe9b9c7e67842a0",
+      "group": "details"
+    },
+    {
+      "name": "20_rock_with_flowers.png",
+      "git_sha": "ae92e99083c8619cbcc0605f5b16b0f3b906b196",
+      "group": "details"
+    },
+    {
+      "name": "21_center_hanging_wisteria.png",
+      "git_sha": "8877972cb327a399429d305da8ccb5c22d0e8af6",
+      "group": "details"
+    }
+  ],
+  "missing": [
+    "11_left_peacock.png",
+    "approved_master.png"
+  ],
+  "warnings": [
+    "04_lake.png contains an opaque background rather than transparent lake-only pixels",
+    "07_left_garden.png and 08_right_garden.png already include peacocks and border structures; do not layer additional peacocks without masking",
+    "Some large full-canvas PNGs contain transparent padding and must be positioned by scene coordinates",
+    "Baked edges/halos and mobile screenshot comparison require review before production"
+  ],
+  "static_preview": "public/index.html",
+  "motion": "none",
+  "quality_gate": "Not yet approved"
+}
